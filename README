@@ -1,1 +1,7 @@
-A java app that builds acronyms from a list of words and synonyms.
+AcronymBuilder - A java app that builds acronyms from a list of words and synonyms.
+
++AcronymFacroty.java
+
++DictionaryBuilder,java
+
++AcronymIO.java
