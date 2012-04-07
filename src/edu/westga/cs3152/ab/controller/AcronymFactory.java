@@ -34,6 +34,10 @@ public class AcronymFactory {
 		this.theWords = words;
 	}
 	
+	public void buildAcronyms() {
+		this.dissectWords();
+	}
+	
 	/**
 	 * Dissects the string of words and adds them to the
 	 * ArrayList wordList.
@@ -56,12 +60,24 @@ public class AcronymFactory {
 	}
 	
 	/**
-	 * Gets the number of synonyms that a word has.
+	 * Counts the total number of 
+	 * @return
+	 */
+	public int countTotal() {
+		int total = 1;
+		for(String word : this.wordList) {
+			total*=this.countSynonyms(word);
+		}
+		return total;
+	}
+	
+	/**
+	 * Counts the number of synonyms that a word has.
 	 * 
 	 * @param word the word to get the synonyms for
 	 * @return the number of synonyms for the word
 	 */
-	public int getSynonymCount(String word) {
+	public int countSynonyms(String word) {
 		return this.theBuilder.getValues(word).size();
 	}
 	

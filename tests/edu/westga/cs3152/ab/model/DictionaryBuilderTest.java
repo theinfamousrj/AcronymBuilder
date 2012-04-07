@@ -1,11 +1,9 @@
 package edu.westga.cs3152.ab.model;
 
 import static org.junit.Assert.*;
-
 import java.io.File;
 import java.util.ArrayList;
 import org.junit.Test;
-
 import edu.westga.cs3152.ab.model.DictionaryBuilder;
 
 /**
